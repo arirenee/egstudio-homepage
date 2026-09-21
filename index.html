@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EG Studio Preview | Short-form editing for agency client work</title>
-  <meta name="description" content="Short-form editing for agencies. Start with three captioned 9:16 videos for $300, or move to fifteen in thirty days for $1,500.">
+  <meta name="description" content="White-label short-form editing for agencies. Start with three captioned 9:16 videos for $300, or move to fifteen in thirty days for $1,500.">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
     .btn-secondary{background:transparent;color:var(--text);border-color:var(--border)}
     .btn-block{width:100%;padding:1.05rem}
     .btn-sm{padding:.58rem .72rem;font-size:.69rem}
-    .hero{padding:2.1rem 0 1.5rem;border-top:0}
+    .hero{padding:2.2rem 0 1.6rem;border-top:0}
     .eyebrow,.kicker,.meta{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
     .eyebrow{font-size:.66rem;margin-bottom:.8rem}
     h1{font-size:clamp(2.2rem,10vw,4.35rem);line-height:.98;font-weight:850;letter-spacing:-.05em;margin-bottom:1rem}
@@ -59,6 +59,8 @@
     .meta{font-size:.58rem;margin-bottom:.18rem}
     .sample h3{font-size:.95rem}
     .disc{font-size:.74rem;color:var(--dim);margin-top:.9rem}
+    .proof-cta{margin-top:1.15rem;padding-top:1.15rem;border-top:1px solid var(--border)}
+    .proof-cta .hero-actions{margin-top:.7rem}
     .sku-grid{display:grid;gap:1rem;margin-top:1rem}
     .sku{border:1px solid var(--border);padding:1.15rem;background:var(--surface)}
     .sku.primary{border-color:var(--white)}
@@ -91,7 +93,7 @@
     @media(min-width:720px){
       .nav-link{display:inline}
       .hero{padding:3.5rem 0 2rem}
-      .hero-actions{grid-template-columns:1fr 1fr;align-items:stretch}
+      .hero-actions.two{grid-template-columns:1fr 1fr;align-items:stretch}
       .samples{grid-template-columns:repeat(3,1fr)}
       .sku-grid{grid-template-columns:1.15fr .85fr}
       .truth-grid{grid-template-columns:repeat(3,1fr)}
@@ -99,31 +101,37 @@
   </style>
   
 <script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="capture".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52',{api_host:'https://us.i.posthog.com',defaults:'2026-05-30',person_profiles:'identified_only'});
-window.addEventListener('load', function(){
-  if (window.posthog) posthog.capture('experiment_variant_view',{experiment:'trust_conversion_v1',variant:'preview'});
-  document.querySelectorAll('[data-sku]').forEach(function(el){
-    el.addEventListener('click',function(){
-      if (window.posthog) posthog.capture('checkout_cta_clicked',{
-        experiment:'trust_conversion_v1',
-        variant:'preview',
-        sku:el.dataset.sku,
-        placement:el.dataset.placement || 'unknown'
-      });
-    });
-  });
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="vu fu pu gu bu init Hu zu qu ju Gu Xl Bu Qu Du eh ih nh sh rh oh capture getExtension Uu cu hh calculateEventProperties uh register register_once register_for_session unregister unregister_for_session gh Nu dh getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync mh identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset yh shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fh Xu createPersonProfile setInternalOrTestUser ph wu opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ju debug Yl Os getPageViewId captureTraceFeedback captureTraceMetric Ru".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
+  api_host:'https://us.i.posthog.com',
+  defaults:'2026-05-30',
+  person_profiles:'identified_only'
 });
 </script>
 
+  <script>
+  window.addEventListener('load', function(){
+    if (window.posthog) posthog.capture('experiment_variant_view',{experiment:'trust_conversion_v1',variant:'preview_v2'});
+    document.querySelectorAll('[data-sku]').forEach(function(el){
+      el.addEventListener('click',function(){
+        if (window.posthog) posthog.capture('checkout_cta_clicked',{
+          experiment:'trust_conversion_v1',
+          variant:'preview_v2',
+          sku:el.dataset.sku,
+          placement:el.dataset.placement || 'unknown'
+        });
+      });
+    });
+  });
+  </script>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">EG<span>STUDIO</span></a>
     <div class="nav-actions">
-      <a class="nav-link" href="#work">See the work</a>
-      <a class="btn btn-primary btn-sm" data-sku="test" data-placement="header" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 · $300</a>
+      <a class="nav-link" href="#offers">Scope &amp; pricing</a>
+      <a class="btn btn-primary btn-sm" href="#work">See the work ↓</a>
     </div>
   </div>
 </header>
@@ -135,25 +143,25 @@ window.addEventListener('load', function(){
       <h1>Your clients.<br>Your brand.<br>Our edit.</h1>
       <p class="lead">Send one client interview or podcast. EG Studio turns it into captioned vertical clips, delivers through an unbranded Drive folder, and stays out of your client relationship.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-block" data-sku="test" data-placement="hero_primary" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 videos · $300</a>
-        <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="hero_secondary" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">15-video Sprint · $1,500</a>
+        <a class="btn btn-primary btn-block" href="#work">See the editing ↓</a>
       </div>
-      <p class="micro">No discovery call required. <strong>Stripe checkout.</strong> Then send the brief.</p>
+      <p class="micro">3 videos for $300 · 15 videos for $1,500 · Stripe checkout · No discovery call required.</p>
 
       <div class="trust-strip" aria-label="Trust facts">
         <div class="trust-item"><b>Los Angeles</b><span>EG STUDIO</span></div>
         <div class="trust-item"><b>Stripe checkout</b><span>CARD DATA STAYS WITH STRIPE</span></div>
         <div class="trust-item"><b>White-label</b><span>NO CLIENT CONTACT</span></div>
-        <div class="trust-item"><b>Private by default</b><span>NO PORTFOLIO USE WITHOUT WRITTEN PERMISSION</span></div>
+        <div class="trust-item"><b>No portfolio use</b><span>WITHOUT WRITTEN PERMISSION</span></div>
       </div>
     </div>
   </section>
 
   <section id="work">
     <div class="wrap">
-      <p class="kicker">See the edit before the pitch</p>
-      <h2>Three public recuts. No fake client logos.</h2>
-      <p>These demonstrate caption treatment, pacing, punch-ins and moment selection. They are not presented as client work or endorsements.</p>
+      <p class="kicker">See the edit before you buy</p>
+      <h2>Editing samples. Clearly labeled.</h2>
+      <p>Public recuts demonstrating caption treatment, pacing, punch-ins and moment selection. They are not presented as client work or endorsements.</p>
+
       <div class="samples">
         <article class="sample">
           <video controls playsinline preload="metadata" poster="https://egstudio.tech/assets/samples/sample-podcast.jpg?v=4">
@@ -174,14 +182,24 @@ window.addEventListener('load', function(){
           <div class="info"><p class="meta">Executive</p><h3>Clean authority edit</h3></div>
         </article>
       </div>
+
       <p class="disc">Public recuts for editing demonstration only. No endorsement implied.</p>
+
+      <div class="proof-cta">
+        <p class="kicker">Low-risk first order</p>
+        <h2>Start with 3. Scale to 15.</h2>
+        <div class="hero-actions two">
+          <a class="btn btn-primary btn-block" data-sku="test" data-placement="after_samples_primary" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 videos · $300</a>
+          <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="after_samples_secondary" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">15-video Sprint · $1,500</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="offers">
     <div class="wrap">
-      <p class="kicker">Choose the amount of risk you want</p>
-      <h2>Start small. Scale only if the edit works.</h2>
+      <p class="kicker">Scope &amp; pricing</p>
+      <h2>Start with 3. Scale to 15.</h2>
 
       <div class="sku-grid">
         <div class="sku primary">
@@ -216,7 +234,7 @@ window.addEventListener('load', function(){
           </ul>
           <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="offer_sprint" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">Start the 15-video Sprint · $1,500</a>
           <div class="risk">
-            <p><b>Approve the style before full production.</b> If the initial style sample does not align with the brief and revisions cannot resolve it, the current Terms allow cancellation before batch production begins for a 100% refund.</p>
+            <p><b>Approve the style before full production.</b> If the initial style sample does not align with the brief and revisions cannot resolve it, you may cancel before batch production begins for a 100% refund under the current published terms.</p>
           </div>
         </div>
       </div>
@@ -236,9 +254,9 @@ window.addEventListener('load', function(){
 
   <section id="trust">
     <div class="wrap">
-      <p class="kicker">What is verifiable today</p>
-      <h2>No invented proof.</h2>
-      <p>EG Studio does not present public recuts as customer work. Until referenceable client proof exists, the site should earn trust with clear scope, visible work, consistent policies and identifiable contact information—not fabricated testimonials.</p>
+      <p class="kicker">Trust &amp; transparency</p>
+      <h2>What you can verify before you pay.</h2>
+      <p>Clear scope, visible editing samples, published terms and direct contact details—so you can evaluate the work and the operating rules before checkout.</p>
       <div class="truth-grid">
         <div class="sheet">
           <strong>Business identity</strong>
@@ -278,17 +296,17 @@ window.addEventListener('load', function(){
       </details>
       <details>
         <summary>How is client footage treated?</summary>
-        <p>Footage links and questionnaire information are used to run the project. Client work is not added to EG Studio's portfolio without prior written permission. The current published policy does not state a retention period or subcontractor policy, so this preview does not invent one.</p>
+        <p>Footage links and questionnaire information are used to run the project. Client work is not added to EG Studio's portfolio without prior written permission. Questions about footage handling can be sent to <a href="mailto:ops@egstudio.tech">ops@egstudio.tech</a>.</p>
       </details>
     </div>
   </section>
 
   <section class="final">
     <div class="wrap">
-      <p class="kicker">Low-risk first order</p>
+      <p class="kicker">Ready to test the fit?</p>
       <h2>Have one recording that needs clips?</h2>
       <p>Start with three. Move to fifteen only if the edit fits.</p>
-      <div class="hero-actions">
+      <div class="hero-actions two">
         <a class="btn btn-primary btn-block" data-sku="test" data-placement="final_primary" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 videos · $300</a>
         <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="final_secondary" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">15-video Sprint · $1,500</a>
       </div>
