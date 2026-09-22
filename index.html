@@ -111,12 +111,12 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
 
   <script>
   window.addEventListener('load', function(){
-    if (window.posthog) posthog.capture('experiment_variant_view',{experiment:'trust_conversion_v1',variant:'preview_v2'});
+    if (window.posthog) posthog.capture('experiment_variant_view',{experiment:'trust_conversion_v2',variant:'sales_system_v3'});
     document.querySelectorAll('[data-sku]').forEach(function(el){
       el.addEventListener('click',function(){
         if (window.posthog) posthog.capture('checkout_cta_clicked',{
-          experiment:'trust_conversion_v1',
-          variant:'preview_v2',
+          experiment:'trust_conversion_v2',
+          variant:'sales_system_v3',
           sku:el.dataset.sku,
           placement:el.dataset.placement || 'unknown'
         });
@@ -138,29 +138,25 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
 
 <main id="top">
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">White-label short-form editing for agencies</p>
-      <h1>Your clients.<br>Your brand.<br>Our edit.</h1>
-      <p class="lead">Send one client interview or podcast. EG Studio turns it into captioned vertical clips, delivers through an unbranded Drive folder, and stays out of your client relationship.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-block" href="#work">See the editing ↓</a>
-      </div>
-      <p class="micro">3 videos for $300 · 15 videos for $1,500 · Stripe checkout · No discovery call required.</p>
-
-      <div class="trust-strip" aria-label="Trust facts">
-        <div class="trust-item"><b>Los Angeles</b><span>EG STUDIO</span></div>
-        <div class="trust-item"><b>Stripe checkout</b><span>CARD DATA STAYS WITH STRIPE</span></div>
-        <div class="trust-item"><b>White-label</b><span>NO CLIENT CONTACT</span></div>
-        <div class="trust-item"><b>No portfolio use</b><span>WITHOUT WRITTEN PERMISSION</span></div>
-      </div>
-    </div>
-  </section>
+<div class="wrap">
+<p class="eyebrow">White-label short-form editing for agencies</p>
+<h1>Turn client recordings into ready-to-post short-form.</h1>
+<p class="lead">Send an interview, podcast or talking-head recording. Get finished 9:16 clips back under your agency's name—without adding another editor to payroll or another vendor to your client's inbox.</p>
+<div class="hero-actions"><a class="btn btn-primary btn-block" href="#work">Watch the editing samples ↓</a></div>
+<p class="micro">Start with 3 videos for $300. Scale to 15 for $1,500 when the fit is right.</p>
+<div style="margin-top:1.25rem;border-top:1px solid var(--border)">
+<div class="line"><span>$300 test</span><b>3 clips · 20 min source · 3–5 business days</b></div>
+<div class="line"><span>$1,500 Sprint</span><b>15 clips · 90 min source · 30 days</b></div>
+<div class="line"><span>White-label</span><b>Unbranded Drive · no client contact</b></div>
+</div>
+</div>
+</section>
 
   <section id="work">
     <div class="wrap">
-      <p class="kicker">See the edit before you buy</p>
-      <h2>Editing samples. Clearly labeled.</h2>
-      <p>Public recuts demonstrating caption treatment, pacing, punch-ins and moment selection. They are not presented as client work or endorsements.</p>
+      <p class="kicker">Editing samples</p>
+      <h2>See the pacing, captions and cut style before you buy.</h2>
+      <p>These public recuts show how EG Studio handles hooks, punch-ins, captions and short-form pacing. They are editing demonstrations, not client endorsements.</p>
 
       <div class="samples">
         <article class="sample">
@@ -186,11 +182,11 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
       <p class="disc">Public recuts for editing demonstration only. No endorsement implied.</p>
 
       <div class="proof-cta">
-        <p class="kicker">Low-risk first order</p>
-        <h2>Start with 3. Scale to 15.</h2>
+        <p class="kicker">First order</p>
+        <h2>Start small. Keep the option to scale.</h2>
         <div class="hero-actions two">
-          <a class="btn btn-primary btn-block" data-sku="test" data-placement="after_samples_primary" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 videos · $300</a>
-          <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="after_samples_secondary" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">15-video Sprint · $1,500</a>
+          <a class="btn btn-primary btn-block" data-sku="test" data-placement="after_samples_primary" href="https://buy.stripe.com/3cI9AM26tgmYeTFgEB9EI0b">Start with 3 videos · $300</a>
+          <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="after_samples_secondary" href="https://buy.stripe.com/eVqeV69yV8UwdPB5ZX9EI0c">15-video Sprint · $1,500</a>
         </div>
       </div>
     </div>
@@ -199,14 +195,14 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
   <section id="offers">
     <div class="wrap">
       <p class="kicker">Scope &amp; pricing</p>
-      <h2>Start with 3. Scale to 15.</h2>
+      <h2>Two fixed offers. No proposal call required.</h2>
 
       <div class="sku-grid">
         <div class="sku primary">
           <span class="tag">Recommended for first order</span>
           <p class="meta">Three-video paid test</p>
           <div class="price">$300 <span>one time</span></div>
-          <p>One small assignment before you commit to a full Sprint.</p>
+          <p>Use one real client recording to test the workflow and finished edit quality.</p>
           <ul class="checks">
             <li>3 captioned 9:16 videos, each under 60 seconds</li>
             <li>1 English-language recording up to 20 minutes</li>
@@ -215,7 +211,7 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
             <li>Delivery in 3–5 business days after usable footage, assets and brief</li>
             <li>$300 may credit toward the full Sprint if upgrade starts within 7 days of final delivery</li>
           </ul>
-          <a class="btn btn-primary btn-block" data-sku="test" data-placement="offer_test" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 videos · $300</a>
+          <a class="btn btn-primary btn-block" data-sku="test" data-placement="offer_test" href="https://buy.stripe.com/3cI9AM26tgmYeTFgEB9EI0b">Start with 3 videos · $300</a>
           <p class="micro">The $300 fee becomes non-refundable once raw files are accepted and production begins. <a href="terms.html">Terms</a> · <a href="refund.html">Refunds</a></p>
         </div>
 
@@ -223,7 +219,7 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
           <span class="tag">For ready-to-go volume</span>
           <p class="meta">30-day B2B Sprint</p>
           <div class="price">$1,500 <span>one time</span></div>
-          <p>Fifteen finished vertical videos. $100 per video.</p>
+          <p>A defined 30-day production run for agencies with more client footage ready to move.</p>
           <ul class="checks">
             <li>15 videos in three batches of 5</li>
             <li>Up to 90 minutes of source footage</li>
@@ -232,7 +228,7 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
             <li>Batches on days 10, 20 and 30</li>
             <li>Unbranded Google Drive delivery</li>
           </ul>
-          <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="offer_sprint" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">Start the 15-video Sprint · $1,500</a>
+          <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="offer_sprint" href="https://buy.stripe.com/eVqeV69yV8UwdPB5ZX9EI0c">Start the 15-video Sprint · $1,500</a>
           <div class="risk">
             <p><b>Approve the style before full production.</b> If the initial style sample does not align with the brief and revisions cannot resolve it, you may cancel before batch production begins for a 100% refund under the current published terms.</p>
           </div>
@@ -243,60 +239,48 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
 
   <section>
     <div class="wrap">
-      <p class="kicker">How it works</p>
-      <h2>Pay. Brief. Approve the look. Receive the files.</h2>
-      <div class="line"><span>01 Pay</span><b>Stripe checkout</b></div>
-      <div class="line"><span>02 Brief</span><b>Footage, brand assets, style reference</b></div>
-      <div class="line"><span>03 Style</span><b>Sprint buyers approve the initial look before batch production</b></div>
-      <div class="line"><span>04 Delivery</span><b>Unbranded files. Your client relationship stays yours.</b></div>
+      <p class="kicker">After payment</p>
+      <h2>One brief. One source link. Then we edit.</h2>
+      <div class="line"><span>01 Pay</span><b>Stripe checkout collects payment only</b></div>
+      <div class="line"><span>02 Brief</span><b>Share a source link, brand assets and one style reference</b></div>
+      <div class="line"><span>03 Edit</span><b>Test: one batch · Sprint: approve a style sample first</b></div>
+      <div class="line"><span>04 Delivery</span><b>Unbranded Google Drive delivery from ops@egstudio.tech</b></div>
     </div>
   </section>
 
-  <section id="trust">
-    <div class="wrap">
-      <p class="kicker">Trust &amp; transparency</p>
-      <h2>What you can verify before you pay.</h2>
-      <p>Clear scope, visible editing samples, published terms and direct contact details—so you can evaluate the work and the operating rules before checkout.</p>
-      <div class="truth-grid">
-        <div class="sheet">
-          <strong>Business identity</strong>
-          <p>EG Studio · Los Angeles, California · edward@egstudio.tech · ops@egstudio.tech</p>
-        </div>
-        <div class="sheet">
-          <strong>Client relationship</strong>
-          <p>Delivery is white-label. EG Studio does not contact your client and does not publicly portfolio client work without prior written permission.</p>
-        </div>
-        <div class="sheet">
-          <strong>Payment handling</strong>
-          <p>Checkout is handled by Stripe. The published Privacy notice states card numbers stay with Stripe.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="trust"><div class="wrap">
+<p class="kicker">Built for agency fulfillment</p>
+<h2>Your client relationship stays yours.</h2>
+<div class="stack">
+<div class="sheet"><p><strong style="color:var(--text)">White-label by default.</strong><br>No watermark, no EG Studio branding on deliverables, and no public portfolio use without written permission.</p></div>
+<div class="sheet"><p><strong style="color:var(--text)">No subscription.</strong><br>Each order stands alone. Buy the test, buy a Sprint, or stop after delivery.</p></div>
+<div class="sheet"><p><strong style="color:var(--text)">No client contact.</strong><br>You remain the client-facing agency. EG Studio communicates with the buyer through ops@egstudio.tech.</p></div>
+<div class="sheet"><p><strong style="color:var(--text)">Scope is published before payment.</strong><br>Pricing, footage limits, revisions, turnaround and refund rules are visible before checkout.</p></div>
+</div></div></section>
 
   <section id="faq">
     <div class="wrap">
       <p class="kicker">Transparency</p>
       <h2>FAQ</h2>
       <details open>
-        <summary>Do we need a call first?</summary>
-        <p>No. The product is intentionally scoped for agencies that already know what they need. Pay, submit the brief, and start.</p>
+        <summary>Who is this built for?</summary>
+        <p>Agencies already producing client podcasts, interviews, webinars or thought-leadership recordings and needing short-form editing capacity behind the scenes.</p>
       </details>
       <details>
-        <summary>What does white-label mean here?</summary>
-        <p>Unbranded delivery, your naming, no watermark and no direct contact with your client.</p>
+        <summary>What do I need to send?</summary>
+        <p>A shareable source-footage link, any brand assets you want used, and one reference that shows the pacing or caption style you want.</p>
       </details>
       <details>
-        <summary>How much footage can I send?</summary>
-        <p>The three-video test covers one English-language recording up to 20 minutes. The full Sprint covers up to 90 minutes of source footage.</p>
+        <summary>What is not included?</summary>
+        <p>Filming, posting, full-episode editing, complex custom animation and native project files are outside these fixed offers unless separately agreed.</p>
       </details>
       <details>
         <summary>What are the revision limits?</summary>
         <p>The three-video test includes one minor text-and-pacing revision round across the batch. The full Sprint includes up to two revision rounds per video.</p>
       </details>
       <details>
-        <summary>How is client footage treated?</summary>
-        <p>Footage links and questionnaire information are used to run the project. Client work is not added to EG Studio's portfolio without prior written permission. Questions about footage handling can be sent to <a href="mailto:ops@egstudio.tech">ops@egstudio.tech</a>.</p>
+        <summary>What happens immediately after I pay?</summary>
+        <p>Stripe redirects you to the project brief. Submit the source link and brand direction there; ops@egstudio.tech handles the project from that point forward.</p>
       </details>
     </div>
   </section>
@@ -307,8 +291,8 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
       <h2>Have one recording that needs clips?</h2>
       <p>Start with three. Move to fifteen only if the edit fits.</p>
       <div class="hero-actions two">
-        <a class="btn btn-primary btn-block" data-sku="test" data-placement="final_primary" href="https://buy.stripe.com/7sY6oA5iF8UweTF3RP9EI0a">Start with 3 videos · $300</a>
-        <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="final_secondary" href="https://buy.stripe.com/aFabIU9yVc6I9zl5ZX9EI06">15-video Sprint · $1,500</a>
+        <a class="btn btn-primary btn-block" data-sku="test" data-placement="final_primary" href="https://buy.stripe.com/3cI9AM26tgmYeTFgEB9EI0b">Start with 3 videos · $300</a>
+        <a class="btn btn-secondary btn-block" data-sku="sprint" data-placement="final_secondary" href="https://buy.stripe.com/eVqeV69yV8UwdPB5ZX9EI0c">15-video Sprint · $1,500</a>
       </div>
     </div>
   </section>
@@ -316,12 +300,12 @@ posthog.init('phc_ABQhr5obJDzxwBjYt4qZc6gGWUsBzB5jN8zFG46tjc52', {
 
 <footer>
   <div class="wrap">
-    <div>EG STUDIO | Los Angeles, CA | egstudio.tech</div>
+    <div>EG STUDIO | Los Angeles, CA | <a href="mailto:ops@egstudio.tech">ops@egstudio.tech</a></div>
     <nav class="flinks">
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
       <a href="refund.html">Refunds</a>
-      <a href="mailto:edward@egstudio.tech">edward@egstudio.tech</a>
+      <a href="mailto:ops@egstudio.tech">ops@egstudio.tech</a>
     </nav>
   </div>
 </footer>
